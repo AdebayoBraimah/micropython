@@ -213,7 +213,7 @@ static inline unsigned long mp_random_seed_init(void) {
 // This macro is not provided by glibc but we need it so ports that don't have
 // dirent->d_ino can disable the use of this field.
 #ifndef _DIRENT_HAVE_D_INO
-#define _DIRENT_HAVE_D_INO (1)
+#undef _DIRENT_HAVE_D_INO
 #endif
 
 #ifndef __APPLE__
